@@ -9,9 +9,19 @@
  }
  body{
      height: 100vh;
-     width: 100%;
+     /* width: 100%; */
      overflow-x: hidden;
      overflow-y: auto;
+ }
+ .login-btn,.home-atag a{
+    border: 3px solid #0AAF4F;
+    padding: 2px 13px;
+   
+ }
+ .signup-btn{
+    border: 3px solid #0AAF4F;
+    padding: 2px 8px;
+    background-color: #0AAF4F;
  }
  nav{
      position: relative;
@@ -52,7 +62,7 @@
      list-style: none;
      margin-right: 30px;
  }
- .menu-list li a{
+ .menu-list li a,.home-atag a{
      text-decoration: none;
      color: #fff;
      font-weight: 600;
@@ -107,8 +117,11 @@
  .home-atag{
     display: flex;
     justify-content: center;
-     
+    gap: .625rem;
  } 
+ .home-atag a:nth-child(2){
+    background-color: #0AAF4F;
+ }
  
  .destination-container img{
     width: 418px;
@@ -127,6 +140,7 @@
     justify-items: center;
     padding: 28px 180px;
 }
+ 
 
 .about h1{
     text-align: center;
@@ -134,16 +148,25 @@
 .about-content{
     display: flex;
     padding: 18px;
+    
+}
+.about-content p{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 10px;
 }
  
 .about-content img{
     height: 316px;
     border: 3px solid black;
+    margin-left: 55px;
 }
 .districts{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 88px;
+    
 }
 .districts article img{
     border-radius: 50%;
@@ -153,6 +176,7 @@
 .districts-h1{
     text-align: center;
 }
+
 /* ///contact form/// */
 .contact{
     width: 100%;
@@ -198,4 +222,95 @@
 }
 .contact-form button:hover{
     background: #016dcb;
+}
+/* //Media querie// */
+@media screen and (max-width:1400px){
+    .destination-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        padding: 28px 114px;
+        gap: 12px;
+    }
+    .heading-h1{
+        
+        text-align: end;
+        margin-right: 202px;
+    }
+    .position-h1{
+        text-align: center;
+        width: 100%;
+        left: 20%;
+    }
+}
+@media screen  and (max-width:1200px){
+    .position-h1{
+        text-align: center;
+        width: 100%;
+    }
+    .heading-h1{
+        text-align: end;
+        margin-right: 291px;
+    }
+}
+@media screen and (max-width:992px) {
+    .position-h1{
+        left: 434px;
+    }
+    .heading-h1{
+        margin-right: -53px;
+    }
+    
+    .districts{
+        width: 200%;
+    row-gap: 140px;
+    }
+    .contact{
+        width: 200%;
+    }
+}   
+@media screen and (max-width:960px) {
+    .about{
+        width: 183%;
+        margin-left: 98px;
+    }
+    .districts{
+        margin-left: 138px;
+    }
+    .districts-h1{
+        margin-left: 82%;
+    }
+}
+@media screen and (max-width:470px) {
+
+    .destination-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        justify-items: center;
+        padding: 28px 383px;
+        gap: 134px;
+    }
+    .heading-h1{
+        width: 218%;
+    }
+   
+    .position-h1 {
+        left: 664px;
+        top: 218px;
+    }
+    .districts{
+        margin-left: 333px;
+    column-gap: 137px;
+    }
+    .districts-h1{
+        margin-left: 680px;
+        width: 100vh;
+    }
+    .contact{
+        margin-left: 347px;
+    }
+    .about{
+        margin-left: 380px;
+        width: 319vh;
+    }
 }
